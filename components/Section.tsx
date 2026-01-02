@@ -1,3 +1,4 @@
+
 import React, { forwardRef, ReactNode } from 'react';
 
 interface SectionProps {
@@ -11,9 +12,9 @@ const Section = forwardRef<HTMLElement, SectionProps>(({ id, children, className
     <section 
       id={id} 
       ref={ref} 
-      className={`group min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 section-fade-in ${className}`}
+      className={`group min-h-screen flex items-center justify-center py-12 px-4 sm:px-10 lg:px-20 section-fade-in ${className}`}
     >
-      <div className="w-full max-w-7xl">
+      <div className="w-full max-w-7xl mx-auto">
         {children}
       </div>
     </section>
