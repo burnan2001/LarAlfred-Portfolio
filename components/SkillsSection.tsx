@@ -1,6 +1,7 @@
+
 import React from 'react';
 import type { Skill } from '../types';
-import { FRONTEND_SKILLS, BACKEND_SKILLS, DEVOPS_SKILLS, THREE_D_SKILLS } from '../constants';
+import { FRONTEND_SKILLS, BACKEND_SKILLS, DEVOPS_SKILLS, THREE_D_SKILLS, DESIGN_SKILLS } from '../constants';
 
 const SkillCard: React.FC<Skill> = ({ name, icon, proficiency }) => (
     <div aria-label={`${name}: ${proficiency}% proficiency`} className="group flex flex-1 flex-col gap-4 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all hover:border-primary/50 hover:-translate-y-1">
@@ -22,11 +23,12 @@ const SkillsSection: React.FC = () => {
         <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-3 text-center">
                 <h1 className="text-text-light text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl">My Tech Stack</h1>
-                <p className="text-white/60 text-base font-normal leading-normal max-w-2xl mx-auto">A collection of tools and technologies I use to build things.</p>
+                <p className="text-white/60 text-base font-normal leading-normal max-w-2xl mx-auto">A collection of tools and technologies I use to build and design things.</p>
             </div>
 
             <div className='flex flex-col gap-10'>
-                <SkillCategory title="Front-end" skills={FRONTEND_SKILLS} />
+                <SkillCategory title="UI/UX & Design" skills={DESIGN_SKILLS} />
+                <SkillCategory title="Front-end Development" skills={FRONTEND_SKILLS} />
                 <SkillCategory title="Back-end & Databases" skills={BACKEND_SKILLS} />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
                     <SkillCategory title="DevOps & Tools" skills={DEVOPS_SKILLS} gridClassName="grid-cols-[repeat(auto-fit,minmax(158px,1fr))]" />
